@@ -1,0 +1,107 @@
+ID: 4VZYYXY9
+Initials: NB
+
+public double getTotalRevenue(){
+double total = 0;
+for(int r = 0; r < allFlights.size(); r++){
+   if(allFlights.get(r).getCapacity() < allFlights.get(r).getNumPassengers()){
+      total += allFlights.get(r).getCapacity() * allFlights.get(r).getPrice();
+   } else {
+      total += allFlights.get(r).getNumPassengers() * allFlights.get(r).getPrice();
+   }
+}
+return total;
+}
+
+public int updateFlights(){
+int people = 0;
+for(int r = 0; r < allFlights.size(); r++){
+   if(allFlights.get(r).getNumPassengers() < allFlights.get(r).getCapacity() * 0.2){
+      people += allFlights.get(r).getNumPassengers();
+      allFlights.remove(r);
+      r--;
+   }
+}
+return people;
+}
+
+public Flight getMostLuggageCapacity(){}
+
+I would first add another private instance variable, weight to the Flight class.
+Then I would add w as a parameter for the new variable to be assigned 
+in the constructor of the Flight class. 
+This new variable would account for the amount of luggage, by weight, the Flight carries.
+After that I would create an accesor method that returns the amount of luggage,
+by weight that a Flight can carry in the Flight class.
+
+
+ID: 4VZYYXY9
+Initials: NB
+
+public static double gradeSimulation(){
+int total = 1;
+int num = 0;
+double ratio = 0;
+if(getGrade() > 90){
+   num++;
+   ratio = (double)num/total;
+}
+total++;
+return ratio;
+}
+
+The gradeAnalysis would need to add a private static instance variable that keeps
+track of the maximum grade.
+There must be a constructor that initializes the variable to the maximum grade;
+I would then change the method getGrade so that it returns a grade that is less than 
+the variable that holds maximum grade. That way, the grades that are higher than the maximum
+are ignored entirely.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

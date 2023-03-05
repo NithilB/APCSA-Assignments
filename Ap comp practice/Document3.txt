@@ -1,0 +1,12 @@
+public static int[] firstNumSelfDivisors(int start, int num){
+Integer[] arr = new Integer[num];
+   for(int r = 0; r < num; r++){
+       start++;
+       if(isSelfDivisor(start)){
+       arr[r] = start;
+       } else {
+       r--;
+       }
+   }
+   return arr;
+}

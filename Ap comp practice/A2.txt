@@ -1,0 +1,26 @@
+public void playRound(){
+int computer = spin(2,8);
+int player = spin(1,10);
+int points = 0;
+if(player == computer){
+   computer = spin(1,10);
+   player = spin(2,8); 
+   if(player > computer){
+      points++;
+      System.out.print("You win! " + points + " points");
+   } else if(player < computer){
+      points--;
+      System.out.print("You Lose! " + points + " points");
+   } else {
+      points += 0;
+      System.out.print("Tie. " + points + " points");
+   }
+} else if(player > computer){
+  points += player - computer;
+  System.out.print("You win! " + points + " points");
+} else if(player < computer){
+  points += player - computer;
+  System.out.print("You Lose! " + points + " points");
+}
+
+}

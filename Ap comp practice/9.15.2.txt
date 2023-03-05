@@ -1,0 +1,10 @@
+public static void palindromeChecker(String str){
+String s = removeSpaces(str);
+s= reverseString(str);
+String w = removeSpaces(str);
+if(w.equals(s)){
+   System.out.println(str + " is a palindrome");
+} else {
+   System.out.println(str + " is not a palindrome");
+}
+}

@@ -1,0 +1,7 @@
+public static String reverseString(String str){
+String result = "";
+for(int r = 0; r < str.length(); r++){
+result += str.substring(str.length()-r-1, str.length()-r);
+}
+return result;
+}

@@ -1,0 +1,12 @@
+public ArrayList<String> getDelimitersList(String[] tokens){
+  ArrayList<String> list = new ArrayList<String>();
+  for(int r = 0; r < tokens.length; r++){
+    if(openDel.equals(tokens[r])){
+       list.add(tokens[r]);
+    }
+    if(closeDel.equals(tokens[r])){
+       list.add(tokens[r]);
+    } 
+  }
+  return list;
+}

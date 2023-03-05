@@ -1,0 +1,43 @@
+public class Fraction{
+  
+  private numerator;
+  private denominator;
+  
+  public Fraction (int n, int d){
+    numerator = n;
+    denominator = d;
+  }
+
+  public String toString(){
+    return (numerator + "/" + denominator);
+  }
+  
+  public void invert(){
+    int x;
+    numerator = x;
+    denominator = numerator;
+    numerator = denominator;
+}
+  
+  public double toDouble(){
+    return numerator / denominator;
+}
+  
+  public int newFraction(){
+    double y = 0;
+    y = numerator/denominator;  
+    while (numerator/denominator == y){
+      for(int x = 2; x < numerator || x < denominator, x++){
+        if (numerator % x == 0 && denominator % y == 0){
+          
+        }
+      } 
+      
+    }
+
+    
+    
+    
+    
+  }    
+}

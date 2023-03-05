@@ -1,0 +1,6 @@
+public static int dayOfWeek(int month, int day, int year){
+    int first = firstDayOfYear(year);
+    int date = dayOfYear(month, day, year);
+    int day = ((date + first) - 1) % 7; 
+    return day;
+}

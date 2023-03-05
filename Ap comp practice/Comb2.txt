@@ -1,0 +1,14 @@
+public static void numCombinations(int n, int r){
+  if(r > n){
+ 
+  System.out.println("There are 0 ways of choosing " + r + " items from " + n + " choices);
+ 
+  } else {
+
+  int sum = 0;
+  sum = factorial(n) / (factorial(r) * factorial(n - r));
+
+  System.out.println("There are " + sum + " ways of choosing " + r + " items from " + n + " choices);
+  }
+
+}
