@@ -1,0 +1,52 @@
+public boolean record(int score){
+for(int r = 0; r < scoreList.size(); r++){
+   if(scoreList.get(r).getScore() == score){
+      scoreList.get(r).increment();
+      return false;
+   } else if(scoreList.get(r).getScore() > score){
+      scoreList.add(new ScoreInfo(score));
+      return true;
+   }
+}
+scoreList.add(new ScoreInfo(score));
+return true;
+}
+
+public void recordScores(int[] stuScores){
+for(int r = 0; r < scoreList.size(); r++){
+    record(stuScores[r]);
+}
+
+}
+
+public double getSeniorPercent(int score){
+To implement this method, we must add instance variable numSeniors to the ScoreInfo class.
+We also must change the constructor of ScoreInfo to also take in the amount of seniors, then assign numSeniors the amount of seniors.
+When adding the instance variable numSeniors, it should be of private scope.
+Because numSeniors is of private scope, an accessor method is required in ScoreInfo that returns numSeniors.
+
+private String recombine(String word1, String word2){
+String word = "";
+if(word1.length() % 2 == 0){
+word1 = word1.substring(0, word1.length() / 2);
+} else {
+word1 = word1.substring(0, (word1.length() - 1) / 2);
+}
+
+if(word2.length() % 2 == 0){
+word2 = word2.substring(word2.length()/2);
+} else {
+word2 = word2.substring((word2.length()-1)/2);
+}
+word = word1 + word2;
+return word;
+
+}
+
+public boolean checkValidLength(word1, word2){
+To implement this method, we must check wether the recombined word is less 
+than the length of the longest word. First we must compare the lengths
+of word1 and word2 then find out the longest word and put that as a int variable n. 
+Then we must combine the words using the recombine method. 
+Then we will find the length of the recombined word and check if it 
+less than n within a if statement. If it is, we return true, if not false;

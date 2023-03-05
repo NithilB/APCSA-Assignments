@@ -1,0 +1,58 @@
+import java.util.*;
+
+public class Print{
+  public static void main(String[] args){
+    Scanner keyboard = new Scanner(System.in);
+  
+    int x = 0, y = 0;
+    for(int j = 0; j < 3; j++){
+      for (int k = 0; k < 2; k++){
+        y = j - k;
+         x++;
+      }
+    }
+    System.out.println(x);
+      System.out.print(y);
+      System.out.println("\n");
+  
+int a = 40, b = 2;
+
+while(a > b && a > 20){
+ a = a - 5;
+ b *= 2;
+  
+}
+
+System.out.println(a);
+  System.out.println(b + "/n");
+  
+  
+  int s = 1234567;
+  for (int c = 0; c< 10; c+=2){
+     s /= 10; 
+  }
+   System.out.println(s + "\n\n");
+  
+   int t = 0;
+   while( t < 10){
+     for (int f = 0; f < 3; f++){
+       t++;
+     }
+   }
+   System.out.println(t + "\n");
+   int h; 
+   h = keyboard.nextInt();
+   for (int cnt = 1; cnt < h; cnt++){
+       if (h % cnt == 0){
+          System.out.println("Number is prime");
+  
+  
+       }
+   }
+  
+  
+  }
+}
+
+
+

@@ -1,0 +1,74 @@
+public void addReview(ProductReview prodReview){
+reviewList.add(prodReview);
+int cnt = 0;
+for(int r = 0; r < productList.size(); r++){
+    if(prodReview.getName().equals(productList.get(r))){
+       cnt++;
+    }
+}
+if (cnt == 0){
+productList.add(prodReview.getName());
+}
+
+}
+
+public int getNumGoodReviews(String prodName){
+int cnt = 0;
+for(int r = 0; r < reviewList.size(); r++){
+   if(reviewList.get(r).getName().equals(prodName)){
+      if(reviewList.get(r).getReview().indexOf("best") != -1){
+         cnt++;
+      }
+   }
+}
+return cnt;
+}
+
+The getBestReviewsByProduct method would need to include a new ArrayList to add the best reviews. 
+It would also need to add the best review to the new arrayList instead of the adding a number to the
+cnt variable. The method would essentially return the arrayList. It would be like,
+public ArrayList<String> getBestReviewsByProduct(String prodName)
+
+public static int hailstoneLength(int n){
+int length = 1;
+while(n > 1){
+  if(n % 2 == 0){
+     n = n / 2;
+  } else {
+     n = (3*n) + 1;
+  }
+  length++;
+}
+return length;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
