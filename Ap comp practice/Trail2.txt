@@ -1,0 +1,16 @@
+public boolean isDifficult(){
+int cnt = 0;
+for(int r = 0; r < markers.length - 1; r++){
+    if(Math.abs(markers[r+1] - markers[r]) >= 30){
+       cnt++;
+    }
+}
+
+if(cnt >= 3){
+   return true;
+} else { 
+   return false;
+}
+
+
+}

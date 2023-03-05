@@ -1,0 +1,18 @@
+public boolean isLevelTrailSegment(int start, int end){
+int min = markers[start];
+int max = markers[start];
+for(int r = start; r <= end; r++){
+    if(min > markers[r]){
+       min = markers[r];
+    } else if (max < markers[r]){
+       max = markers[r];
+    }
+}
+
+if(max - min > 10){
+   return false;
+} else { 
+   return true;
+}
+
+}

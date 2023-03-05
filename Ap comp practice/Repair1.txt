@@ -1,0 +1,14 @@
+public boolean addRepair(int m, int b){
+    for(int r = 0; r < schedule.size(); r++){
+        if(schedule.get(r).getMechanicNum() == m){
+           return false;
+        }
+        if(schedule.get(r).getBayNum() == b){
+           return false;        
+        }
+    }
+    
+    schedule.add(new CarRepair(m, b));
+    return true;
+}
+

@@ -1,0 +1,13 @@
+public ArrayList<Integer> availableMechanics(){
+    ArrayList<Integer> mechanics = new ArrayList<Integer>();
+    for(int r = 0; r < numberOfMechanics; r++){
+        mechanics.add(r);
+    }
+    for(int c = 0; c < mechanics.size(); c++){
+        if(schedule.get(c).getMechanicNum() == mechanics.get(c)){
+           mechanics.remove(c);
+           c--;
+        }
+    }
+    return mechanics;
+}

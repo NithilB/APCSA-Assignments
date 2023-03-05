@@ -1,0 +1,52 @@
+public class Rectangle{
+  
+  private int width;
+  private int height;
+  
+  public Rectangle(int w, int h){
+    width = w;
+    height = h;
+  }
+  
+  public Rectangle(int w){
+    width = w;
+    height = w;
+  }
+  
+  public Rectangle(){
+    width = 1;
+    height = 1;
+  }
+  
+  public boolean isSquare(){
+    if (width == height){
+      return true;
+    } 
+    return false;
+  }
+  
+  public int quadratize(){
+    int w = width;
+    int h = 0;
+    w += height;
+    w /= 2;
+    
+    h = w;
+    
+    Rectangle knew = new Rectangle(w , h);
+    return knew;
+  }
+  
+  public int getWidth(){
+    return width;
+  }
+
+  public int getHeight(){
+    return height;
+  }
+  
+  
+}
+  
+  
+ 
